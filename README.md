@@ -81,15 +81,14 @@ This solution adds a strong defense layer to our network by filtering out malici
 
 ## 📝 Suricata Rule Strings
 
-### Alert Rule
+### Alert and Drop Rule
 The following Suricata rule detects traffic on port 443 that is not using the TLS protocol:
 
-```suricata
+```suricata alert
       alert tcp any any <> any 443 (msg:"SURICATA Port 443 but not TLS"; flow:to_server,established; app-layer-protocol:!tls; sid:2271003; rev:1;)
 
-### Drop Rule
-```suricata
-   drop tcp any any <> any 443 (msg:"SURICATA Port 443 but not TLS"; flow:to_server,established; app-layer-protocol:!tls; sid:2271003; rev:1;)
+```suricata drop
+   drop tcp any any <> any 443 (msg:"SURICATA Port 443 but not TLS"; flow:to_server,established; app-layer-protocol:!tls; sid:2271003; rev:1;).
 
 ## 🧪 Test Simulation Commands
 
