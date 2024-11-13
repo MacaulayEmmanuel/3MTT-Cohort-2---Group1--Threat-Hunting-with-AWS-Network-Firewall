@@ -35,7 +35,7 @@ This solution adds a strong defense layer to our network by filtering out malici
    - Confirmed the firewall's effectiveness by monitoring CloudWatch logs for unauthorized access attempts.
 
 ## 🖼️ Architecture Diagram
-![Architecture Diagram](threat hunting.jpeg)
+![Architecture Diagram](threat-hunting.jpeg)
 
 ## 🧪 Test Simulation Commands
 
